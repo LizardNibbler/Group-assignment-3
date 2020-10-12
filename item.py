@@ -36,7 +36,7 @@ class item():
         return self.__description
     def get_price(self):
         return self.__price
-    def get_numinsotck(self):
+    def get_numinstock(self):
         return self.__numinstock
     def get_categogery(self):
         return self.__category
