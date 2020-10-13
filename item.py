@@ -8,7 +8,6 @@ class item():
         self.set_price(price)
         self.set_numinstock(numinstock)
         self.set_category(category)
-        item.numberofitems+=1
         return
 
     def set_name(self,name):
@@ -50,7 +49,6 @@ class Book(item):
         self.set_booktype(booktype)
         self.set_author(author)
         self.set_genre(genre)
-        Book.numberofbooks+=1
         return
 
     def set_booktype(self,booktype):
@@ -83,7 +81,6 @@ class household_items(item):
     def __init__(self,name,description,price,numinstock,category,department):
         super().__init__(name,description,price,numinstock,category)
         self.set_department(department)
-        household_items.numberofhouseitems+=1
         return
     
     def set_department(self, department):
@@ -104,7 +101,6 @@ class electronics(item):
         super().__init__(name,description,price,numinstock,category)
         self.set_manufacturer(manufacturer)
         self.set_type(electronic_type)
-        electronics.numberofelectronics+=1
 
     def set_manufacturer(self, manu):
         self.__manu=manu
@@ -129,7 +125,6 @@ class toys(item):
     def __init__(self,name,description,price,numinstock,category,toytype):
         super().__init__(name,description,price,numinstock,category)
         self.set_type(toytype)
-        toys.toysnum+=1
         return
     
     def set_type(self, toytype):
