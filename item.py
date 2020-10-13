@@ -45,7 +45,6 @@ class item():
 
 #super used to refer back to the partent constructor
 class Book(item):
-    numberofbooks=0
     def __init__(self,name,description,price,numinstock,category,booktype,author,genre):
         super().__init__(name,description,price,numinstock,category)
         self.set_booktype(booktype)
@@ -81,8 +80,6 @@ class Book(item):
 
 
 class household_items(item):
-    numberofhouseitems=0
-
     def __init__(self,name,description,price,numinstock,category,department):
         super().__init__(name,description,price,numinstock,category)
         self.set_department(department)
@@ -103,7 +100,6 @@ class household_items(item):
 
 
 class electronics(item):
-    numberofelectronics=0
     def __init__(self,name,description,price,numinstock,category,manufacturer,electronic_type):
         super().__init__(name,description,price,numinstock,category)
         self.set_manufacturer(manufacturer)
@@ -129,7 +125,6 @@ class electronics(item):
 
 
 class toys(item):
-    toysnum=0
 
     def __init__(self,name,description,price,numinstock,category,toytype):
         super().__init__(name,description,price,numinstock,category)
