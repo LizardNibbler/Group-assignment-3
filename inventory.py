@@ -512,8 +512,79 @@ class Store():
         
 
     #this function is for giving the option to remove items from the cart
-   def remove_items(self):
-        print("To be done")
+   def remove_items(self,index,quantity):
+       if(index==0):
+           if(quantity>self.comic):
+               return False
+           else:
+               self.comic-=quantity
+               return True
+       elif(index==1):
+           if(quantity>self.history_book):
+               return False
+           else:
+               self.history_book-=quantity
+               return True
+       elif(index==2):
+           if(quantity>self.cook_book):
+               return False
+           else:
+               self.cook_book-=quantity
+               return True
+       elif(index==3):
+           if(quantity>self.iphone):
+               return False
+           else:
+               self.iphone-=quantity
+               return True
+       elif(index==4):
+           if(quantity>self.phone_charger):
+               return False
+           else:
+               self.phone_charger-=quantity
+               return True
+       elif(index==5):
+           if(quantity>self.tv):
+               return False
+           else:
+               self.phone_tv-=quantity
+               return True
+       elif(index==6):
+           if(quantity>self.cleaner):
+               return False
+           else:
+               self.cleaner-=quantity
+               return True
+       elif(index==7):
+           if(quantity>self.paper):
+               return False
+           else:
+               self.paper-=quantity
+               return True
+       elif(index==8):
+           if(quantity>self.soap):
+               return False
+           else:
+               self.soap-=quantity
+               return True
+       elif(index==9):
+           if(quantity>self.spider_man):
+               return False
+           else:
+               self.spider_man-=quantity
+               return True
+       elif(index==10):
+           if(quantity>self.barbie):
+               return False
+           else:
+               self.barbie-=quantity
+               return True
+       elif(index==11):
+           if(quantity>self.fidget_spin):
+               return False
+           else:
+               self.fidget_spin-=quantity
+               return True
 
         
 #used for testing
@@ -556,18 +627,19 @@ def main():
             print(y)
             print("What would you like to do?\n")
             print("1) purchase the cart\n")
-            print("2) return to main menu\n")
+            print("2) remove items from the cart\n")
+            print("3) return to main menu\n")
             user_input = 0
             accepted=False
             while not accepted:
                 try:
                     user_input = int(input("Select an option: "))    
                 except:
-                    print("Please enter a number between 1 and 2")
-                if(user_input>0 and user_input<3):
+                    print("Please enter a number between 1 and 3")
+                if(user_input>0 and user_input<4):
                     accepted=True
-                elif(user_input<0 or user_input>=3):
-                    print("Please enter a number between 1 and 2")
+                elif(user_input<0 or user_input>=4):
+                    print("Please enter a number between 1 and 3")
             if(user_input==1):
                 y=cart.view_items()
                 u=cart.total_calc()
@@ -577,6 +649,49 @@ def main():
                 file.write(y+u)
                 file.close()
                 cart.empty()
+            elif(user_input==2):
+                print("What would you like to remove")
+                print("1- comic")
+                print("2- History Book")
+                print("3- Cook Book")
+                print("4- iphone")
+                print("5- Phone_charger")
+                print("6- TV")
+                print("7- Cleaner")
+                print("8- Paper")
+                print("9- Soap")
+                print("10- Spiderman")
+                print("11- Barbie")
+                print("12- Fidget Spiner\n")
+                user_input_quantity=0
+                accepted=False
+                while not accepted:
+                    try:
+                        user_input_item=int(input("Select an option: "))
+                    except:
+                        print("Please enter a number between 1 and 12")
+                    if(user_input_item>0 and user_input_item<13):
+                        user_input_item-=1
+                        accepted=True
+                    elif(user_input_item<0 or user_input_item>=13):
+                        print("Please enter a number between 1 and 12")
+                accepted=False
+                while not accepted:
+                    try:
+                        user_input_quantity=int(input("How many: "))
+                    except:
+                        print("Please enter a number")
+                    if(user_input_quantity<0):
+                        print("Please enter a positive number")
+                    else:
+                        accepted=True
+                if(user_input_item<3):
+                    success=cart.remove_items(user_input_item,user_input_quantity)
+                    if(success):
+                        print("successfully removed item")
+                    else:
+                        print("Not successfully removed")
+                    
                 
             
         elif(user_input == 4):
