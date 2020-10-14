@@ -1,4 +1,4 @@
-card_number = list(input("Please enter a card number: ").strip())
+card_number = list(input("Please enter a card number without whitespace: ").strip())
 
 check_digit = card_number.pop()
 
