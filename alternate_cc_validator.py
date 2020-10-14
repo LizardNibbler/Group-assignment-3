@@ -32,11 +32,11 @@ def main():
                 elif card_number[0:4] == "6011":
                     print("Type: Discover card.")
             else:
-                print("\nInvalid!! Credit card number.")
+                print("\nInvalid Credit card number.")
 
             choice = input("\nWant to check again? (y/n): ")
         except ValueError:
-            print("\nErr! Credit card number should be numeric without whitespace. Try again.")
+            print("\nError! Credit card number should be numeric without whitespace. Try again.")
         except:
             print("Unexpected error:", sys.exc_info()[0])
             raise
