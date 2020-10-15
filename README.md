@@ -1,6 +1,8 @@
 # Group-assignment-3
 
-This is the read me to implement our system. You will need to download the files and an place them in the same folder. 
+This is the read me to implement our system. You will need to download the files and an place them in the same folder.
+
+To start the program you need to run inventory.py
 
 To start the program your password is 1234.
 
