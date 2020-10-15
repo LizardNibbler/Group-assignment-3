@@ -1,6 +1,7 @@
 #used to include the item classes
 from item import *
 from login import *
+from credit_card_validation import *
 
 #password test is currently set to 1234 
 
@@ -641,14 +642,25 @@ def main():
                 elif(user_input<0 or user_input>=4):
                     print("Please enter a number between 1 and 3")
             if(user_input==1):
+                
                 y=cart.view_items()
                 u=cart.total_calc()
-                t=cart.purchase()
-                print(y,u)
-                file= open("purchases.txt" , "a")
-                file.write(y+u)
-                file.close()
-                cart.empty()
+                try:
+                    card_number = list(input("Please enter a card number without whitespace: ").strip())
+                    check1=credit_veficiaction(card_number)
+                except:
+                    print("Failed to verify card number please try again.\n")
+                    check1="Invalid credit card number"
+                if(check1=="Valid credit card number"):
+                    t=cart.purchase()
+                    print(y,u)
+                    file= open("purchases.txt" , "a")
+                    file.write(y+u)
+                    file.close()
+                    cart.empty()
+                else:
+                    print("could not purchase cart at this time.\n\n")
+                    
             elif(user_input==2):
                 print("What would you like to remove")
                 print("1- comic")
