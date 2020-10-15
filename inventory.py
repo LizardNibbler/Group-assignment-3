@@ -256,7 +256,7 @@ class Store():
                 while(stock<self.iphone or self.iphone<0):
                     try:
                         num = input("How many would you like to order?\n")
-                        self.comic = int(num)
+                        self.iphone= int(num)
                         stock=self.x.get_stock(3)
                         if(stock < self.iphone or self.iphone<0):
                             print("Only "+str(stock)+" avaible Please enter an appropriate amount")
@@ -350,7 +350,7 @@ class Store():
                 while(stock<self.paper or self.paper<0 ):
                     try:
                         num = input("How many would you like to order?\n")
-                        self.soap = int(num)
+                        self.paper = int(num)
                         stock=self.x.get_stock(8)
                         if(stock < self.paper or self.paper<0):
                             print("Only "+str(stock)+" avaible Please enter an appropriate amount")
