@@ -699,7 +699,6 @@ def main():
                         accepted=True
                 if(user_input_item>0):
                     success=cart.remove_items(user_input_item,user_input_quantity)
-                    print(user_input_item,user_input_quantity)
                     if(success):
                         print("successfully removed item")
                     else:
