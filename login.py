@@ -2,7 +2,7 @@
 # part A, B and C work
 
 #username declaration
-username = "Nathan"
+username = "User"
 
 #password enter function
 def password_enter():
