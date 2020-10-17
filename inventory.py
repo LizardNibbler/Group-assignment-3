@@ -697,7 +697,7 @@ def main():
                         print("Please enter a positive number")
                     else:
                         accepted=True
-                if(user_input_item>0):
+                if(user_input_item>=0):
                     success=cart.remove_items(user_input_item,user_input_quantity)
                     if(success):
                         print("successfully removed item")
