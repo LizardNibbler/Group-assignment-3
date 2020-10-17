@@ -10,7 +10,7 @@ To view number of items in stock inventory choose option 1 upon login. select th
 
 Valid credit cards are 4002997440555586 or 5500000000000004 simply copy and paste to use them.
 
-additional past purchases should include one purchase any new purchases will be placed below.
+additional past purchases should include one purchase, any new purchases will be placed below.
 here is the past purchases in the program.
 10 Comics in Cart
 10 Total items Total cost is: $300
